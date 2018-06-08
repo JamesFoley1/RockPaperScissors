@@ -1,0 +1,14 @@
+form {
+    text-align: center;
+    padding: 50px;
+    width: 550px;
+    border: 1px solid black;
+}
+
+.box {
+    text-align: left;
+}
+
+input {
+    margin: 0px 40px;
+}

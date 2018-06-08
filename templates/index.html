@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/myscript.js') }}"></script>
+</head>
+<body>
+
+    <form action='/process' method='post'>
+        <div class="box"><p>Wins: {{ session['Wins'] }}</p></div>
+        <div class="box"><p>Losses: {{ session['Losses'] }}</p></div>
+        <div class="box"><p>Ties: {{ session['Ties'] }}</p></div>
+        <h3>Rock Paper Scissors</h3>
+        <input type='submit' value='Rock' name ='choice'>
+        <input type='submit' value='Paper' name ='choice'>
+        <input type='submit' value='Scissors' name='choice'>
+    </form>
+    <form action='/reset' method='post'>
+        <input type="submit" name="" value="Reset">
+    </form>
+    
+</body>
+</html>
